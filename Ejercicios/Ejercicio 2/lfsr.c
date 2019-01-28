@@ -9,6 +9,8 @@ void lfsr_calculate(uint16_t *reg) {
 
 }
 
+
+#ifndef TEST
 /* Ignore below. */
 int main() {
   int8_t *numbers = (int8_t*) malloc(sizeof(int8_t) * 65535);
@@ -46,3 +48,4 @@ int main() {
 
   return 0;
 }
+#endif
