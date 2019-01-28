@@ -34,9 +34,9 @@ void test_get_bit(unsigned x,
                   unsigned expected) {
     unsigned a = get_bit(x, n);
     if(a!=expected) {
-        printf("NO\n")
+        printf("get_bit(0x%08x,%u): 0x%08x, expected 0x%08x\n",x,n,a,expected);
     } else {
-        printf("OK\n")
+        printf("get_bit(0x%08x,%u): 0x%08x, correct\n",x,n,a);
     }
 }
 void test_set_bit(unsigned x,
@@ -46,20 +46,19 @@ void test_set_bit(unsigned x,
     unsigned o = x;
     set_bit(&x, n, v);
     if(x!=expected) {
-        printf("NO\n");
+        printf("set_bit(0x%08x,%u,%u): 0x%08x, expected 0x%08x\n",o,n,v,x,expected);
     } else {
-        printf("OK\n")
+        printf("set_bit(0x%08x,%u,%u): 0x%08x, correct\n",o,n,v,x);
     }
 }
 void test_flip_bit(unsigned x,
                    unsigned n,
                    unsigned expected) {
-    unsigned o = x;
     flip_bit(&x, n);
     if(x!=expected) {
-        printf("NO\n");
+        printf("flip_bit(0x%08x,%u): 0x%08x, expected 0x%08x\n",o,n,x,expected);
     } else {
-        printf("OK\n")
+        printf("flip_bit(0x%08x,%u): 0x%08x, correct\n",o,n,x);
     }
 }
 
