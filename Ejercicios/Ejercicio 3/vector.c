@@ -22,26 +22,14 @@ static void allocation_failed() {
 vector_t *vector_new() {
 	vector_t *retval;  
 
-	/* First, we need to allocate the memory for the struct */
-	retval = malloc(1 * sizeof(vector_t));
-
-	/* Check our return value to make sure we got memory */
-	if(retval == NULL)
-                allocation_failed();
-	 
-	/* Now we need to initialize our data */
-	retval->size = 1;
-	retval->data = malloc(retval->size * sizeof(int));
-
-	/* Check our return value to make sure we got memory */
-	if(retval->data == NULL) {
-		free(retval);
-                allocation_failed();
-	}
-
-	retval->data[0] = 0;
+	/* First, we need to allocate the memory for the struct and check our return value to make sure we got memory*/
 	
-	/* and return... */
+	/* ADD CODE HERE */
+	 
+	/* Now we need to initialize our data and, again, verify that we still got memory for our return value*/
+
+	/* ADD CODE HERE */
+	
 	return retval;
 }
 
@@ -60,19 +48,14 @@ int vector_get(vector_t *v, size_t loc) {
 	/* If we are passed a NULL pointer for our vector, complain about it and
          * exit.
 	 */
-	if(v == NULL) {
-		fprintf(stderr, "vector_get: passed a NULL vector.\n");
-                abort();
-	}
+
+	/* ADD CODE HERE */
 
 	/* If the requested location is higher than we have allocated, return 0.
 	 * Otherwise, return what is in the passed location.
 	 */
-	if(loc < v->size) {
-		return v->data[loc];
-	} else {
-		return 0;
-	}
+	/* ADD CODE HERE */
+	return NULL
 }
 
 /* Set a value in the vector. If the extra memory allocation fails, call
@@ -84,6 +67,5 @@ void vector_set(vector_t *v, size_t loc, int value) {
 
 	/* ADD CODE HERE */
 	
-
 
 }
