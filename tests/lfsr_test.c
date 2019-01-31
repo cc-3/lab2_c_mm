@@ -1,16 +1,5 @@
-#include <stdio.h>
-#include <stdint.h>
-#include <stdlib.h>
-#include <string.h>
+#include "lfsr.h"
 
-void lfsr_calculate(uint16_t *reg) {
-
-  /* YOUR CODE HERE */
-
-}
-
-
-#ifndef TEST
 /* Ignore below. */
 int main() {
   int8_t *numbers = (int8_t*) malloc(sizeof(int8_t) * 65535);
@@ -48,4 +37,3 @@ int main() {
 
   return 0;
 }
-#endif
